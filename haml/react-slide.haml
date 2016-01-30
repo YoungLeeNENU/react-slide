@@ -1,0 +1,32 @@
+!!!5
+%html
+  %head
+    %link{:rel => "stylesheet", :href => "../css/slide.css", :type => "text/css", :media => "screen"}
+    %link{:rel => "stylesheet", :href => "../css/slide-theme.css", :type => "text/css", :media => "screen"}    
+    %link{:rel => "stylesheet", :href => "../css/test.css", :type => "text/css", :media => "screen"}    
+  %body
+    -# notice
+    %h1{:class => "gigantic-txt"}
+      React Slide
+    -# slide component
+    -# %div{:class => "slide-bar fold slide-bar-monokai"}
+    %div{:class => "slide-bar unfold slide-bar-monokai"}
+      %div{:class => "slide-handler slide-handler-monokai"}
+        %ul{:class => "handler-items"}
+          %li{:class => "handler-item handler-item-monokai fold-unfold handler-list"}
+            %i{:class => "icon iconfont"}
+              &#xf0025;
+          %li{:class => "handler-item handler-item-monokai fold-unfold handler-favor"}
+            %i{:class => "icon iconfont"}
+              &#xf0144;
+          %li{:class => "handler-item handler-item-monokai fold-unfold handler-config"}
+            %i{:class => "icon iconfont"}
+              &#xf013e;
+          -# %li{:class => "handler-item handler-item-monokai"}
+          -#   B
+          -# %li{:class => "handler-item handler-item-monokai"}              
+          -#   C
+      %div{:class => "slide-panel"}
+        -# %div{:class => "panel-header"}
+        -# %div{:class => "panel-content"}
+    %div{:class => "slide-mask hide"}

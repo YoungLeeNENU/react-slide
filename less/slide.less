@@ -1,0 +1,87 @@
+@base-zi: 999;
+@panel-header-height: 80px;
+@panel-header-spacing-top: 15px;
+@panel-header-spacing-bottom: 5px;
+@panel-spacing-left: 5px;
+@panel-spacing-right: 5px;
+@fold-width: -270px;
+@unfold-width: 0px;
+
+.hide {
+	display: none;
+}
+.slide-mask {
+    opacity: 0.5;
+    background-color: #000000;
+	position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: @base-zi;
+    width: 100%;
+    height: 100%;
+}
+.fold {
+    transition: right 0.75s;
+    -moz-transition:right 0.75s; /* Firefox 4 */
+    -webkit-transition:right 0.75s; /* Safari and Chrome */
+    -o-transition:right 0.75s; /* Opera */
+    right: @fold-width;
+}
+.unfold {
+    transition: right 0.75s;
+    -moz-transition:right 0.75s; /* Firefox 4 */
+    -webkit-transition:right 0.75s; /* Safari and Chrome */
+    -o-transition:right 0.75s; /* Opera */
+    right: @unfold-width;
+}
+.slide-bar {
+	background-color: #ffffff;
+    position: fixed;
+    z-index: @base-zi + 1;
+    top: 0px;
+    bottom: 0px;
+    width: 306px;
+    // right: 0px;
+}
+.slide-bar .slide-handler {
+    position: absolute;
+    z-index: @base-zi + 3;
+	width: 36px;
+    height: 100%;
+}
+.slide-bar .slide-handler .handler-items {
+	list-style: none;
+    width: 100%;
+    height: 100%;
+	margin-top: 10px;
+}
+.slide-bar .slide-handler .handler-item {
+	// test
+}
+.slide-bar .slide-panel {
+    position: relative;
+	padding-left: 36px;
+    height: 100%;
+    z-index: @base-zi + 2;
+    overflow: auto;
+}
+.slide-bar .slide-panel .panel-header {
+    position: absolute;
+	height: @panel-header-height;
+    padding: @panel-header-spacing-top @panel-spacing-right @panel-header-spacing-bottom @panel-spacing-left;
+    z-index: @base-zi + 4;
+	width: 100%;
+}
+.slide-bar .slide-panel .panel-content {
+    display: inline-block;
+    padding-top: @panel-header-spacing-top + @panel-header-height + @panel-header-spacing-bottom + 10px;
+    width: 304px;
+	height: 100%;
+    z-index: @base-zi + 5;
+}
+.slide-bar .slide-handler .handler-item {
+	text-align: center;
+    line-height: 40px;
+    height: 40px;
+    cursor: pointer;
+}

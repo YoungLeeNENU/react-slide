@@ -1,0 +1,2 @@
+* 一个用 react 编写的侧滑组件
+** 作为 react 和 webpack 的练习 
